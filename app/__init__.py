@@ -1,5 +1,5 @@
 """Setup at app startup"""
-from app import routes
+
 from flask import Flask
 import psycopg2
 
@@ -13,3 +13,5 @@ postgres = psycopg2.connect(
 # To prevent from using a blueprint, we use a cyclic import
 # This also means that we need to place this import here
 # pylint: disable=cyclic-import, wrong-import-position
+
+from app import routes
